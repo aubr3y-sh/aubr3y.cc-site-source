@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.128.2">
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn-main@1/images/favicons/dsrca.ico" />
+
+
+
+<title>universal file converter &#43; compressor with python - aubr3y.cc</title>
+
+
+<meta name="author" content="aubr3y" />
+
+
+<meta name="description" content="making a universal file converter with python with built in file compression" />
+
+
+<meta name="keywords" content="python, files, beginner" />
+
+
+<meta property="og:title" content="universal file converter &#43; compressor with python" />
+<meta name="twitter:title" content="universal file converter &#43; compressor with python" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python-file-converter/" /><meta property="og:description" content="making a universal file converter with python with built in file compression" />
+<meta name="twitter:description" content="making a universal file converter with python with built in file compression" /><meta property="og:image" content="http://localhost:1313/img/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/img/og.png" /><meta property="article:published_time" content="2020-05-11T00:00:00+00:00" /><meta property="article:modified_time" content="2020-05-11T00:00:00+00:00" />
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/assets/css/fuji.min.7b45eebb8f0d830f8b7deb765ae5a61a8e68065d4f0715c75c3132eef266a1cdc59f91a265dc690dd0bc98dc5fdd8ea3554f2729fb6c8bb9f819723c89b5794d.css" integrity="sha512-e0Xuu48Ngw&#43;Lfet2WuWmGo5oBl1PBxXHXDEy7vJmoc3Fn5GiZdxpDdC8mNxf3Y6jVU8nKftsi7n4GXI8ibV5TQ==" />
+
+
+
+
+
+
+
+
+</head>
+
+<body
+  data-theme="auto"
+  data-theme-auto='true'
+  >
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="http://localhost:1313/">aubr3y.cc</a>
+            
+            <span class="title-sub">what i cannot create, i do not understand</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="http://localhost:1313/post/python-file-converter/">universal file converter &#43; compressor with python</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-05-11</span>
+
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;946 words</span>
+<span><i class="iconfont icon-time-sharp"></i>&nbsp;5 minutes</span>
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/python">python</a>&nbsp;<a href="/tags/files">files</a>&nbsp;<a href="/tags/beginner">beginner</a>&nbsp;</span>
+
+    </div>
+    
+    <div class="post-content markdown-body">
+        <h3 id="intro">intro</h3>
+<p>i thought of this while converting a bunch of <code>.MTS</code> files from my sony handicam (i absolutely adore 2000s digicam technology) to <code>.MP4</code> for easier file sharing since not everything supports <code>.MTS</code> files to be embedded and played natively, such as discord. while usually I simply import all the videos into premiere pro or kdenlive, depending on the os i&rsquo;m using, and put all the clips together from whatever was recorded an export, effectively converting from a bunch of <code>.MTS</code> clips to a single full <code>.MP4</code> video. however the problem was raised when i simply wanted to record a guitar riff i had been messing around with for my band and my phone microphone just could not pick up the sound from the amp (my phone is an old hand-me-down from my father who works in construction so everything is broken or clogged with bits of cement and other shit). it ended up being a 15 minute task to upload the video to a converter site, download it again, realise discord only allows 8mb video upload without nitro, go find a compressor site and repeat the process then finally i could upload the video.</p>
+<p>while i am well aware there are about a million python scripted file converters and compressors i could easily download from github, i have wanted to dip my toes into python as i begin my journey of coding and other such stuff so i thought i may aswell make it myself. as i&rsquo;m writing this i think i would like to also make this a basis for my own personal suite of file management and conversion to fit my workflow so for ease of use and redistribution i will make this a gui converter with room to expand and add many other file manipulation features.</p>
+<h3 id="body">body</h3>
+<p>with lack of really any python coding experience i have one of two options, read documentation on the basics or learn as i go. have a wild guess at what i always choose. this post will be a small mix of instructions and just my processes used so sorry if it reads a bit weird i only really make these posts to keep myself motivated and get down my thoughts.</p>
+<h5 id="basic-python-syntax">basic python syntax</h5>
+<p>before getting started its best you (or more fittingly i) know the basics of python, assuming you know python already you can skip this part, its more just note taking for me to learn python.</p>
+<p>// variables:
+in python, variables are used to store data. you can assign these values to these variables using the <code>=</code> operator as seen below.</p>
+<pre><code class="language-python">name = &quot;converter&quot;
+version = 1.0
+</code></pre>
+<p>in this example, the variable <code>name</code> is assigned the string <code>converter</code> as its value, and the variable <code>version</code> has been assigned a floating point number (whole number containing decimal point) of <code>1.0</code></p>
+<p>// functions:
+functions let you turn logic into a shorthand function and reuse it through out your project without the hassle of re-writing the code.
+this is easily done through defining the function, naming it then writing the desired function
+an example of this is shown beneath.</p>
+<pre><code class="language-python">def greet():
+    print(&quot;welcome to a3cc-file-manipulator&quot;)
+
+greet()  # calls the function and prints the message
+</code></pre>
+<p>the <code>def</code> keyword unlocks new problem solving by enabling us to think of solutions with reduced code mess. this can be seen with this simple addition calculator.</p>
+<pre><code class="language-python">def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # Outputs: 8
+</code></pre>
+<p>// conditionals:
+in python <code>if</code> statements are used to check conditions such as if a certain file type is selected.</p>
+<pre><code class="language-python">def check_file_type(file_path):
+    if file_path.endswith(&quot;.png&quot;):
+        print(&quot;It's a PNG file.&quot;)
+    elif file_path.endswith(&quot;.csv&quot;):
+        print(&quot;It's a CSV file.&quot;)
+    else:
+        print(&quot;Unsupported file type.&quot;)
+</code></pre>
+<p>the keywords <code>if</code> <code>elif</code> and <code>else</code> are used here to execute code based on desired conditions.
+using <code>filepath.endswith()</code> allows the system to check what the selected file extension is.</p>
+<h5 id="file-handling-with-python">file handling with python</h5>
+<p>python makes it quite easy to access and read or write to a file, you could use something simple like this chunk of code to open a file.</p>
+<pre><code class="language-python">with open(&quot;filename.txt&quot;, &quot;r&quot;) as file:
+    content = file.read()
+    print(content)
+</code></pre>
+<hr>
+<p>syntax explanation:</p>
+<ul>
+<li><code>open(&quot;filename.txt&quot;, &quot;r&quot;)</code> opens the selected file in read mode (hence the <code>r</code> statement), this can be changed to <code>w</code> for write, <code>a</code> for append and so on</li>
+<li><code>with</code> is a crucial statement to allowing the file to be properly closed once used</li>
+</ul>
+<h5 id="file-paths-and-directories">file paths and directories</h5>
+<p>through the use of libraries (collections of code simplified to shorthand to make code neater and just easier) you can quickly and effectively interact with file paths. Using the libraries <code>os</code> and <code>pathlib</code> you can make make a small script for opening and saving files with our converter.</p>
+<pre><code class="language-python">import os
+from pathlib import Path
+
+# get current directory
+current_directory = os.getcwd()
+print(f&quot;Current Directory: {current_directory}&quot;)
+
+# combine paths safely
+file_path = Path(current_directory) / &quot;folder&quot; / &quot;file.txt&quot;
+print(f&quot;full file path: {file_path}&quot;)
+</code></pre>
+<hr>
+<p>syntax explanation:</p>
+<ul>
+<li><code>os.getcwd()</code> returns what the current working directory is (where the commands are being executed)</li>
+<li><code>Path(current_directory) / &quot;folder&quot; / &quot;file.txt&quot;</code> selects the name of the directories and files to combine them to a single complete path</li>
+</ul>
+<h5 id="using-tkinter-for-file-dialogue">using tkinter for file dialogue</h5>
+<p><code>tkinter</code> is a standard python package for the tcl/tk gui toolkit. using the module <code>tkinter.filedialog</code> you enable the user to select a file from their system. using <code>filetypes=</code> you are able to specify what files the user can upload. the below code will display how you can configure <code>filedialog</code> to change the file specifications.</p>
+<pre><code class="language-python">from tkinter import filedialog
+
+# open file dialog to select file
+file_path = filedialog.askopenfilename(filetypes=[(&quot;img files&quot;, &quot;*.png *.jpg&quot;), (&quot;CSV files&quot;, &quot;*.csv&quot;)])
+print(f&quot;selected file: {file_path}&quot;)
+</code></pre>
+<h5 id="finally-beginning-the-project">finally beginning the project</h5>
+<p>to begin we will construct a simple gui window to build upon.</p>
+<h3 id="conclusion">conclusion</h3>
+
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>unless otherwise noted, the content of this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a>.</p>
+    </blockquote>
+</div>
+
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>pages:</h3>
+        <ul>
+            
+            <li>
+                <a href="/">home</a>
+            </li>
+            
+            <li>
+                <a href="/archives/">archives</a>
+            </li>
+            
+            <li>
+                <a href="/about/">about</a>
+            </li>
+            
+            <li>
+                <a href="/search/">search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>links:</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/aubr3y-sh" target="_blank"><span>github</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/aubr3ydev" target="_blank"><span>twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="" target="_blank"><span></span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>tags:</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/beginner/">Beginner</a>
+            </span>
+            
+            <span>
+                <a href="/tags/files/">Files</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+        </div>
+    </div>
+    <div class="sidebar-item sidebar-toc">
+        <h3>jump to:</h3><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#intro">intro</a></li>
+        <li><a href="#body">body</a></li>
+        <li><a href="#conclusion">conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</aside>
+
+        </div>
+        <div class="btn">
+    <div class="btn-menu" id="btn-menu">
+        <i class="iconfont icon-grid-sharp"></i>
+    </div>
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+<aside class="sidebar-mobile" style="display: none;">
+  <div class="sidebar-wrapper">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>pages:</h3>
+        <ul>
+            
+            <li>
+                <a href="/">home</a>
+            </li>
+            
+            <li>
+                <a href="/archives/">archives</a>
+            </li>
+            
+            <li>
+                <a href="/about/">about</a>
+            </li>
+            
+            <li>
+                <a href="/search/">search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>links:</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/aubr3y-sh" target="_blank"><span>github</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/aubr3ydev" target="_blank"><span>twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="" target="_blank"><span></span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>tags:</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/beginner/">Beginner</a>
+            </span>
+            
+            <span>
+                <a href="/tags/files/">Files</a>
+            </span>
+            
+            <span>
+                <a href="/tags/python/">Python</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>jump to:</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#intro">intro</a></li>
+        <li><a href="#body">body</a></li>
+        <li><a href="#conclusion">conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+    
+  </div>
+</aside>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            
+            <span>&copy; 2024-2024
+                <a href="http://localhost:1313/">aubr3y</a>
+                 | <a href="https://aubr3y.cc">Source code</a> 
+                | <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"
+                                                    target="_blank">Hugo</a>
+            </span>
+        </div>
+    </div>
+</footer>
+
+    
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ==" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-core.min.js" integrity="sha512-LCKPTo0gtJ74zCNMbWw04ltmujpzSR4oW+fgN+Y1YclhM5ZrHCZQAJE4quEodcI/G122sRhSGU2BsSRUZ2Gu3w==" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-GP4x8UWxWyh4BMbyJGOGneiTbkrWEF5izsVJByzVLodP8CuJH/n936+yQDMJJrOPUHLgyPbLiGw2rXmdvGdXHA==" crossorigin="anonymous"></script>
+
+
+
+<script defer src="/assets/js/fuji.min.645f1123be695831f419ab54c1bcba327325895c740014006e57070d4f3e5d6b553e929c4b46f40ea707249e9c7f7c2a446d32a39ce7319f80a34525586a8e0f.js" integrity="sha512-ZF8RI75pWDH0GatUwby6MnMliVx0ABQAblcHDU8&#43;XWtVPpKcS0b0DqcHJJ6cf3wqRG0yo5znMZ&#43;Ao0UlWGqODw=="></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aubr3y.cc</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on aubr3y.cc</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>universal file converter &#43; compressor with python</title>
+      <link>http://localhost:1313/post/python-file-converter/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python-file-converter/</guid>
+      <description>intro i thought of this while converting a bunch of .MTS files from my sony handicam (i absolutely adore 2000s digicam technology) to .MP4 for easier file sharing since not everything supports .MTS files to be embedded and played natively, such as discord. while usually I simply import all the videos into premiere pro or kdenlive, depending on the os i&amp;rsquo;m using, and put all the clips together from whatever was recorded an export, effectively converting from a bunch of .MTS clips to a single full .MP4 video. however the problem was raised when i simply wanted to record a guitar riff i had been messing around with for my band and my phone microphone just could not pick up the sound from the amp (my phone is an old hand-me-down from my father who works in construction so everything is broken or clogged with bits of cement and other shit).</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

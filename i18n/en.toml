@@ -1,0 +1,49 @@
+[sidebarToc]
+    other = "jump to:"
+
+[sidebarPages]
+    other = "pages:"
+
+[sidebarTags]
+    other = "tags:"
+
+[sidebarLinks]
+    other = "links:"
+
+[sidebarBangumiChart]
+    other = "Bangumi"
+
+[postMetaNoTag]
+    other = "No tag"
+
+[postMetaWordCount]
+    one = "{{.Count}} word"
+    other = "{{.Count}} words"
+
+[postMetaReadingTime]
+    one = "{{.Count}} minute"
+    other = "{{.Count}} minutes"
+
+[postCopyrightFront]
+    other = "unless otherwise noted, the content of this site is licensed under "
+
+[postCopyrightEnd]
+    other = "."
+
+[postComment]
+    other = "load comments"
+
+[archivesTotalPages]
+    other = "total posts: "
+
+[tagsCurrentTag]
+    other = "posts with the tag {{ .Title }}: "
+
+[searchSuccess]
+    other = "[NUM] results ([TIME] ms)"
+
+[searchNotFound]
+    other = "results not found"
+
+[searchFailed]
+    other = "failed to load index file"

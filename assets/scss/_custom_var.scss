@@ -1,0 +1,37 @@
+$font-size-0: 2rem !default; // 16px->32px
+$font-size-1: 1.75rem !default; // 16px->28px #
+$font-size-2: 1.5rem !default; // 16px->24px ##
+$font-size-3: 1.25rem !default; // 16px->20px ###
+$font-size-4: 1rem !default; // 16px->16px ####
+
+// used primer variables
+// @primer/css/support/variables/misc.scss
+$font-weight-bold: 600;
+$font-weight-semibold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 400;
+$body-font: 'JetBrains Mono', monospace;
+$mono-font: 'JetBrains Mono', monospace;
+$title-font: 'JetBrains Mono', monospace;
+$body-font-size: 13px !default;
+
+$width-md: 768px;
+
+$light-color-primary: #83a598; // Gruvbox Material - Aqua
+$light-color-secondary: #d3869b; // Gruvbox Material - Red
+$light-color-focus: #fabd2f; // Gruvbox Material - Yellow
+$light-color-mute: #928374; // Gruvbox Material - Gray
+$light-color-font: #3c3836; // Gruvbox Material - Dark Background
+$light-color-divider: #ebdbb2; // Gruvbox Material - Light Background
+$light-color-bg: #fbf1c7; // Gruvbox Material - Light Background Alt
+$light-color-codebg: #f2e5bc; // Gruvbox Material - Code Background
+
+$dark-color-primary: #8ec07c; // Gruvbox Material - Green
+$dark-color-secondary: #d79921; // Gruvbox Material - Yellow
+$dark-color-focus: #fabd2f; // Gruvbox Material - Yellow
+$dark-color-mute: #a89984; // Gruvbox Material - Gray
+$dark-color-font: #ebdbb2; // Gruvbox Material - Light Font
+$dark-color-divider: #3c3836; // Gruvbox Material - Dark Background
+$dark-color-bg: #282828; // Gruvbox Material - Dark Background Alt
+$dark-color-codebg: #32302f; // Gruvbox Material - Code Background Dark
+
