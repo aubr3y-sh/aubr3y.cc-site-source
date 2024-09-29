@@ -33,10 +33,10 @@ post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 [params]
 author = "aubr3y"                # You can also set author in post front matter individually
 subTitle = "what i cannot create, i do not understand"
-defaultTheme = "auto"              # default theme when first visit (auto|dark|light)
+defaultTheme = "dark"              # default theme when first visit (auto|dark|light)
 
 # Source URL of the website, will appear in the footer
-sourceURL = "https://aubr3y.cc"
+sourceURL = "https://github.com/aubr3y-sh/aubr3y.cc-site-source"
 
 # Use CloudFlare Workers to accelerate the Google Analytics
 # If you are using this please comment the googleAnalytics above
@@ -57,7 +57,7 @@ hideNoTagList = false
 showLicenseInFooter = false
 
 # License at the end of each post
-showLicense = true
+showLicense = false
 showToc = true
 
 # Copyright
@@ -121,17 +121,13 @@ name = "home"
 url = "/"
 weight = 1
 [[menu.nav]]
-name = "archives"
+name = "posts"
 url = "/archives/"
 weight = 2
 [[menu.nav]]
 name = "about"
 url = "/about/"
 weight = 3
-[[menu.nav]]
-name = "search"
-url = "/search/"
-weight = 4
 [[menu.nav]]
 name = "RSS"
 url = "/index.xml"
