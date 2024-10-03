@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,7 +16,7 @@
 
 
 
-<title>universal file converter &#43; compressor with python - aubr3y.cc</title>
+<title>procedural dungeon generator - aubr3y.cc</title>
 
 
 <meta name="author" content="aubr3y" />
@@ -25,16 +25,16 @@
 <meta name="description" content="making a universal file converter with python with built in file compression" />
 
 
-<meta name="keywords" content="python, files, beginner" />
+<meta name="keywords" content="python, learning, beginner" />
 
 
-<meta property="og:title" content="universal file converter &#43; compressor with python" />
-<meta name="twitter:title" content="universal file converter &#43; compressor with python" />
+<meta property="og:title" content="procedural dungeon generator" />
+<meta name="twitter:title" content="procedural dungeon generator" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/python-file-converter/" /><meta property="og:description" content="making a universal file converter with python with built in file compression" />
-<meta name="twitter:description" content="making a universal file converter with python with built in file compression" /><meta property="og:image" content="http://localhost:1313/img/og.png" />
+<meta property="og:url" content="https://aubr3y.cc/post/python-file-converter/" /><meta property="og:description" content="making a universal file converter with python with built in file compression" />
+<meta name="twitter:description" content="making a universal file converter with python with built in file compression" /><meta property="og:image" content="https://aubr3y.cc/img/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/img/og.png" /><meta property="article:published_time" content="2020-05-11T00:00:00+00:00" /><meta property="article:modified_time" content="2020-05-11T00:00:00+00:00" />
+<meta name="twitter:image" content="https://aubr3y.cc/img/og.png" /><meta property="article:published_time" content="2020-09-03T00:00:00+00:00" /><meta property="article:modified_time" content="2020-09-03T00:00:00+00:00" />
 
 
 <style>
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/assets/css/fuji.min.7b45eebb8f0d830f8b7deb765ae5a61a8e68065d4f0715c75c3132eef266a1cdc59f91a265dc690dd0bc98dc5fdd8ea3554f2729fb6c8bb9f819723c89b5794d.css" integrity="sha512-e0Xuu48Ngw&#43;Lfet2WuWmGo5oBl1PBxXHXDEy7vJmoc3Fn5GiZdxpDdC8mNxf3Y6jVU8nKftsi7n4GXI8ibV5TQ==" />
+<link rel="stylesheet" href="https://aubr3y.cc/assets/css/fuji.min.7b45eebb8f0d830f8b7deb765ae5a61a8e68065d4f0715c75c3132eef266a1cdc59f91a265dc690dd0bc98dc5fdd8ea3554f2729fb6c8bb9f819723c89b5794d.css" integrity="sha512-e0Xuu48Ngw&#43;Lfet2WuWmGo5oBl1PBxXHXDEy7vJmoc3Fn5GiZdxpDdC8mNxf3Y6jVU8nKftsi7n4GXI8ibV5TQ==" />
 
 
 
@@ -84,7 +84,7 @@
     <header>
     <div class="container-lg clearfix">
         <div class="col-12 header">
-            <a class="title-main" href="http://localhost:1313/">aubr3y.cc</a>
+            <a class="title-main" href="https://aubr3y.cc/">aubr3y.cc</a>
             
             <span class="title-sub">what i cannot create, i do not understand</span>
             
@@ -100,23 +100,20 @@
 <article>
     
     <h2 class="post-item post-title">
-        <a href="http://localhost:1313/post/python-file-converter/">universal file converter &#43; compressor with python</a>
+        <a href="https://aubr3y.cc/post/python-file-converter/">procedural dungeon generator</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-05-11</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-03</span>
 
-<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;946 words</span>
-<span><i class="iconfont icon-time-sharp"></i>&nbsp;5 minutes</span>
-<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/python">python</a>&nbsp;<a href="/tags/files">files</a>&nbsp;<a href="/tags/beginner">beginner</a>&nbsp;</span>
+<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;1128 words</span>
+<span><i class="iconfont icon-time-sharp"></i>&nbsp;6 minutes</span>
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/python">python</a>&nbsp;<a href="/tags/learning">learning</a>&nbsp;<a href="/tags/beginner">beginner</a>&nbsp;</span>
 
     </div>
     
     <div class="post-content markdown-body">
-        <h3 id="intro">intro</h3>
-<p>i thought of this while converting a bunch of <code>.MTS</code> files from my sony handicam (i absolutely adore 2000s digicam technology) to <code>.MP4</code> for easier file sharing since not everything supports <code>.MTS</code> files to be embedded and played natively, such as discord. while usually I simply import all the videos into premiere pro or kdenlive, depending on the os i&rsquo;m using, and put all the clips together from whatever was recorded an export, effectively converting from a bunch of <code>.MTS</code> clips to a single full <code>.MP4</code> video. however the problem was raised when i simply wanted to record a guitar riff i had been messing around with for my band and my phone microphone just could not pick up the sound from the amp (my phone is an old hand-me-down from my father who works in construction so everything is broken or clogged with bits of cement and other shit). it ended up being a 15 minute task to upload the video to a converter site, download it again, realise discord only allows 8mb video upload without nitro, go find a compressor site and repeat the process then finally i could upload the video.</p>
-<p>while i am well aware there are about a million python scripted file converters and compressors i could easily download from github, i have wanted to dip my toes into python as i begin my journey of coding and other such stuff so i thought i may aswell make it myself. as i&rsquo;m writing this i think i would like to also make this a basis for my own personal suite of file management and conversion to fit my workflow so for ease of use and redistribution i will make this a gui converter with room to expand and add many other file manipulation features.</p>
-<h3 id="body">body</h3>
-<p>with lack of really any python coding experience i have one of two options, read documentation on the basics or learn as i go. have a wild guess at what i always choose. this post will be a small mix of instructions and just my processes used so sorry if it reads a bit weird i only really make these posts to keep myself motivated and get down my thoughts.</p>
+        <p>[[learning programming in python through chatgpt]]</p>
+<h3 id="abstract">abstract</h3>
 <h5 id="basic-python-syntax">basic python syntax</h5>
 <p>before getting started its best you (or more fittingly i) know the basics of python, assuming you know python already you can skip this part, its more just note taking for me to learn python.</p>
 <p>// variables:
@@ -145,56 +142,144 @@ print(result)  # Outputs: 8
 in python <code>if</code> statements are used to check conditions such as if a certain file type is selected.</p>
 <pre><code class="language-python">def check_file_type(file_path):
     if file_path.endswith(&quot;.png&quot;):
-        print(&quot;It's a PNG file.&quot;)
+        print(&quot;png file&quot;)
     elif file_path.endswith(&quot;.csv&quot;):
-        print(&quot;It's a CSV file.&quot;)
+        print(&quot;csv file&quot;)
     else:
-        print(&quot;Unsupported file type.&quot;)
+        print(&quot;unsupported file type.&quot;)
 </code></pre>
 <p>the keywords <code>if</code> <code>elif</code> and <code>else</code> are used here to execute code based on desired conditions.
 using <code>filepath.endswith()</code> allows the system to check what the selected file extension is.</p>
-<h5 id="file-handling-with-python">file handling with python</h5>
-<p>python makes it quite easy to access and read or write to a file, you could use something simple like this chunk of code to open a file.</p>
-<pre><code class="language-python">with open(&quot;filename.txt&quot;, &quot;r&quot;) as file:
-    content = file.read()
-    print(content)
+<h5 id="project-aims">project aims</h5>
+<ul>
+<li>create a grid for the dungeon map</li>
+<li>randomly assign rooms within the grid and make sure elements such as doors connect</li>
+<li>add encounters and treasure</li>
+</ul>
+<h5 id="key-python-concepts">key python concepts</h5>
+<ul>
+<li>grids and lists</li>
+<li>randomisation, using the <code>random</code> module to generate room layouts and contents</li>
+<li>loops and conditionals, using loops you will look through the grid to place rooms and check connections</li>
+</ul>
+<h3 id="step-1-creating-the-grid">step 1: creating the grid</h3>
+<h5 id="theory">theory</h5>
+<p>in python, grids can be represented with lists of lists. each sub-list is a row, and each part of that list is a cell within the row. here is an example.</p>
+<pre><code class="language-python">grid = [
+  [0, 0, 0],  # first row with 3 columns
+  [0, 0, 0],  # second row
+  [0, 0, 0]   # third row
+]
 </code></pre>
 <hr>
-<p>syntax explanation:</p>
-<ul>
-<li><code>open(&quot;filename.txt&quot;, &quot;r&quot;)</code> opens the selected file in read mode (hence the <code>r</code> statement), this can be changed to <code>w</code> for write, <code>a</code> for append and so on</li>
-<li><code>with</code> is a crucial statement to allowing the file to be properly closed once used</li>
-</ul>
-<h5 id="file-paths-and-directories">file paths and directories</h5>
-<p>through the use of libraries (collections of code simplified to shorthand to make code neater and just easier) you can quickly and effectively interact with file paths. Using the libraries <code>os</code> and <code>pathlib</code> you can make make a small script for opening and saving files with our converter.</p>
-<pre><code class="language-python">import os
-from pathlib import Path
-
-# get current directory
-current_directory = os.getcwd()
-print(f&quot;Current Directory: {current_directory}&quot;)
-
-# combine paths safely
-file_path = Path(current_directory) / &quot;folder&quot; / &quot;file.txt&quot;
-print(f&quot;full file path: {file_path}&quot;)
+<p>to initialise a a grid dynamically you can use loops, more specifically in this case the <code>for</code> loop. the <code>for</code> loop, in simple terms, is a loop type used to scan through and iterable object (something you can loop over, such as a list because it has multiple components within) and perform the desired action to each component within the object.
+say we have the line &ldquo;<code>for item in sequence</code>&rdquo;, the keyword <code>for</code> tells python were beginning a loop, <code>item</code> is a temp variable that takes the value from each different element in the <code>sequence</code> one at a time. lets see this in a more concrete example.</p>
+<pre><code class="language-python">for i in range(5):
+    print(i)
 </code></pre>
 <hr>
-<p>syntax explanation:</p>
-<ul>
-<li><code>os.getcwd()</code> returns what the current working directory is (where the commands are being executed)</li>
-<li><code>Path(current_directory) / &quot;folder&quot; / &quot;file.txt&quot;</code> selects the name of the directories and files to combine them to a single complete path</li>
-</ul>
-<h5 id="using-tkinter-for-file-dialogue">using tkinter for file dialogue</h5>
-<p><code>tkinter</code> is a standard python package for the tcl/tk gui toolkit. using the module <code>tkinter.filedialog</code> you enable the user to select a file from their system. using <code>filetypes=</code> you are able to specify what files the user can upload. the below code will display how you can configure <code>filedialog</code> to change the file specifications.</p>
-<pre><code class="language-python">from tkinter import filedialog
+<p>in the above example, <code>range(5)</code> generates a sequence of numbers from 0 - 4 (this does not include 5). the loop runs 5 times, as specified by the range, each time with <code>i</code> extracting values from <code>range(5)</code>, after which the <code>print</code> function prints the value that <code>i</code> obtained in each iteration.</p>
+<h5 id="implementation">implementation</h5>
+<p>for our program, were going to use something called a nested loop, all this means is that there is a loop contained within a loop. this can be done as so.</p>
+<pre><code class="language-python">rows, cols = 3, 3
+grid = []
 
-# open file dialog to select file
-file_path = filedialog.askopenfilename(filetypes=[(&quot;img files&quot;, &quot;*.png *.jpg&quot;), (&quot;CSV files&quot;, &quot;*.csv&quot;)])
-print(f&quot;selected file: {file_path}&quot;)
+for i in range(rows):  # creates each row
+    row = []
+    for j in range(cols):  # creates each column in row
+        row.append(0)  # initialise with 0 
+    grid.append(row)  # add completed row to grid
+
+print(grid)
 </code></pre>
-<h5 id="finally-beginning-the-project">finally beginning the project</h5>
-<p>to begin we will construct a simple gui window to build upon.</p>
-<h3 id="conclusion">conclusion</h3>
+<hr>
+<ul>
+<li>as defined by the variables, the outer loop <code>rows</code> runs 3 times, and same with the inner loop <code>cols</code></li>
+<li><code>row.append(0)</code> allows us to append the value <code>0</code> to each element in the current row</li>
+<li><code>grid.append(row)</code> allows us to add the row to the grid</li>
+</ul>
+<p>while this program does what we want it to do, it can become a hassle to write this out every time we want a new grid, to change the grid size, or any other parameters.
+to fix this lets use functions.</p>
+<pre><code class="language-python">def create_grid(rows, cols):
+    grid = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(0) 
+        grid.append(row)
+    return grid
+
+# call function and print grid
+dungeon_grid = create_grid(3, 3)
+print(dungeon_grid)
+</code></pre>
+<hr>
+<ul>
+<li>here we defined <code>rows</code> and <code>cols</code> as parameters to the <code>create_grid</code> function, this allows us to change grid size dynamically through something like <code>create_grid(10,10)</code></li>
+<li><code>return grid</code> allows the grid to be returned once created so it can be used outside the function</li>
+</ul>
+<h3 id="step-2-procedural-room-placement">step 2: procedural room placement</h3>
+<h5 id="theory-1">theory</h5>
+<p>the <code>random</code> module in python allows you to generates random numbers or make random choices as seen below.</p>
+<pre><code class="language-python">import random
+
+random_number = random.randint(0, 9)  # generates random integer from 0-9
+</code></pre>
+<hr>
+<ul>
+<li><code>random.randint(x,y)</code>returns a random integer between x - y, inclusive.</li>
+</ul>
+<h5 id="implementation-1">implementation</h5>
+<p>the following code will implement the <code>random</code> module and make a new function to place rooms.</p>
+<pre><code class="language-python">import random
+
+def create_grid(rows, cols):
+    grid = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(0)
+        grid.append(row)
+    return grid
+
+def place_rooms(grid, num_rooms):
+    rows = len(grid)
+    cols = len(grid[0])
+
+    for _ in range(num_rooms):
+        while True:  # keep trying till empty spot
+            row = random.randint(0, rows - 1)
+            col = random.randint(0, cols - 1)
+
+            if grid[row][col] == 0:  # if spot is empty
+                grid[row][col] = 1  # place room
+                break
+            
+            elif grid[row][col] == 1:  # if spot is filled
+                grid[row][col] = 2  # place special room
+
+grid = create_grid(5, 5)
+num_rooms = random.randint(5, 10)
+
+place_rooms(grid, num_rooms)
+for row in grid:
+    print(row)
+</code></pre>
+<hr>
+<ul>
+<li>in the above code we have added a <code>place_rooms()</code> function. this function takes the <code>grid</code> and <code>num_rooms</code> parameters as inputs</li>
+<li><code>len(grid)</code> gets the number of rows in the grid, and then <code>len(grid[0])</code> gets number of columns (in python the <code>len()</code> function is used to return the number of items in an object or string)</li>
+<li>a while loop allows us to continue running a command until a condition is met. in our code this means it keeps running till <code>0</code> (an empty spot) is found to place a room</li>
+<li>if the command lands on a spot its already selected <code>1</code> it becomes a special room <code>2</code> using <code>elif</code></li>
+<li>if the spot is already occupied, the loop tries again with new random coordinates</li>
+</ul>
+<h3 id="step-3-connecting-rooms-with-corridors">step 3: connecting rooms with corridors</h3>
+<h5 id="theory-2">theory</h5>
+<p>// key concepts in this step:</p>
+<ul>
+<li>coordinate systems &gt; the grid&rsquo;s rows and columns act as coordinates, so we will be connecting coordinates on our grid this way.</li>
+<li>pathfinding &gt; moving horizontally and vertically from one room to another forms corridors inbetween</li>
+</ul>
 
     </div>
 </article>
@@ -237,11 +322,11 @@ print(f&quot;selected file: {file_path}&quot;)
             </li>
             
             <li>
-                <a href="https://twitter.com/aubr3ydev" target="_blank"><span>twitter</span></a>
+                <a href="https://soundcloud.com/aubrey-62070392" target="_blank"><span>soundcloud</span></a>
             </li>
             
             <li>
-                <a href="" target="_blank"><span></span></a>
+                <a href="https://twitter.com/aubr3ydev" target="_blank"><span>twitter</span></a>
             </li>
             
         </ul>
@@ -256,7 +341,7 @@ print(f&quot;selected file: {file_path}&quot;)
             </span>
             
             <span>
-                <a href="/tags/files/">Files</a>
+                <a href="/tags/learning/">Learning</a>
             </span>
             
             <span>
@@ -270,9 +355,10 @@ print(f&quot;selected file: {file_path}&quot;)
   <ul>
     <li>
       <ul>
-        <li><a href="#intro">intro</a></li>
-        <li><a href="#body">body</a></li>
-        <li><a href="#conclusion">conclusion</a></li>
+        <li><a href="#abstract">abstract</a></li>
+        <li><a href="#step-1-creating-the-grid">step 1: creating the grid</a></li>
+        <li><a href="#step-2-procedural-room-placement">step 2: procedural room placement</a></li>
+        <li><a href="#step-3-connecting-rooms-with-corridors">step 3: connecting rooms with corridors</a></li>
       </ul>
     </li>
   </ul>
@@ -326,11 +412,11 @@ print(f&quot;selected file: {file_path}&quot;)
             </li>
             
             <li>
-                <a href="https://twitter.com/aubr3ydev" target="_blank"><span>twitter</span></a>
+                <a href="https://soundcloud.com/aubrey-62070392" target="_blank"><span>soundcloud</span></a>
             </li>
             
             <li>
-                <a href="" target="_blank"><span></span></a>
+                <a href="https://twitter.com/aubr3ydev" target="_blank"><span>twitter</span></a>
             </li>
             
         </ul>
@@ -345,7 +431,7 @@ print(f&quot;selected file: {file_path}&quot;)
             </span>
             
             <span>
-                <a href="/tags/files/">Files</a>
+                <a href="/tags/learning/">Learning</a>
             </span>
             
             <span>
@@ -363,9 +449,10 @@ print(f&quot;selected file: {file_path}&quot;)
   <ul>
     <li>
       <ul>
-        <li><a href="#intro">intro</a></li>
-        <li><a href="#body">body</a></li>
-        <li><a href="#conclusion">conclusion</a></li>
+        <li><a href="#abstract">abstract</a></li>
+        <li><a href="#step-1-creating-the-grid">step 1: creating the grid</a></li>
+        <li><a href="#step-2-procedural-room-placement">step 2: procedural room placement</a></li>
+        <li><a href="#step-3-connecting-rooms-with-corridors">step 3: connecting rooms with corridors</a></li>
       </ul>
     </li>
   </ul>
@@ -382,7 +469,7 @@ print(f&quot;selected file: {file_path}&quot;)
         <div class="col-12 footer">
             
             <span>&copy; 2024-2024
-                <a href="http://localhost:1313/">aubr3y</a>
+                <a href="https://aubr3y.cc/">aubr3y</a>
                  | <a href="https://github.com/aubr3y-sh/aubr3y.cc-site-source">site source code</a> 
                 | Powered by <a href="https://github.com/dsrkafuu/hugo-theme-fuji/"
                    target="_blank">Fuji-v2</a> &amp; <a href="https://gohugo.io/"

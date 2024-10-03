@@ -142,6 +142,10 @@ name = "twitter"
 url = "https://twitter.com/aubr3ydev"
 weight = 2
 [[menu.link]]
+name = "soundcloud"
+url = "https://soundcloud.com/aubrey-62070392"
+weight = 2
+
 
 [build]
 noJSConfigInAssets = true
